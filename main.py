@@ -22,7 +22,7 @@ def start():
         for column in res:
             s = create_index(column, table_name, column)
             result.append(s)
-        with open(f"{table_name}.sql", "w") as file:
+        with open(f"sql-scripts/{table_name}.sql", "w") as file:
             text = "\n".join(result)
             file.write(text)
         return
@@ -36,7 +36,7 @@ def start():
             b = "_".join(b.split(" "))
         strs.append(create_index(b, table_name, res[i]))
         i += 1
-    with open(f"{table_name}.sql", "w") as file:
+    with open(f"sql-scripts/{table_name}.sql", "w") as file:
         text = "\n".join(strs)
         file.write(text)
 
