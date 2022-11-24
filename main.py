@@ -13,9 +13,7 @@ def start():
         tmp -= 1
     question: str = input("Хотите ли вы задать для каждого поля имя индекса? д/н ")
     if (question != 'д'):
-        return
-    if (question != 'н'):
-        with open(f"{table_name}.sql", 'w') as file:
+        with open(f"{table_name}.txt", 'w') as file:
             file.write(table_name + " " + ",".join(res))
         return
     question: str = input("Хотите автоматически заполнить индексы теми же именами что и столбец? д/н ")
